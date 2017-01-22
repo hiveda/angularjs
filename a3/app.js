@@ -9,7 +9,7 @@ angular.module('NarrowItDownApp', [])
 function FoundItemsDirective() {
   var ddo = {
     // templateUrl: 'items.html',
-    template: '<ul><li ng-repeat="x in ctrl.found">{{ x.short_name }} : {{ x.description }}  <button ng-click="ctrl.removeItem($index);">Dont want this one!</button></li></ul>',
+    template: '<ul><li ng-repeat="x in ctrl.found">{{ x.short_name }} : {{ x.name }} | {{ x.description }}  <button ng-click="ctrl.removeItem($index);">Dont want this one!</button></li></ul>',
     scope: {
       ctrl: '=myCtrl',
       items: '<',
