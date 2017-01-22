@@ -34,7 +34,7 @@ function Ctrlr(SearchService) {
       c.found = [];
       if (searchTerm.trim().length > 0)
       {
-        var promise = SearchService.getMatchedMenuItems(searchTerm);
+        var promise = SearchService.getMatchedMenuItems(searchTerm.toLowerCase());
         promise.then(function (response) {
           // don't use "this"" => refers not to ctlr function !!!
           //this.found = response.data;
