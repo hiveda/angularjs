@@ -31,12 +31,16 @@ function Ctrlr(SearchService) {
   // })
   
   this.getItems = function (searchTerm){
-      var promise = SearchService.getMatchedMenuItems(searchTerm);
-      promise.then(function (response) {
-        // don't use "this"" => refers not to ctlr function !!!
-        //this.found = response.data;
-        c.found = response;
-      })
+      c.found = [];
+      if (searchTerm.trim().length > 0)
+      {
+        var promise = SearchService.getMatchedMenuItems(searchTerm);
+        promise.then(function (response) {
+          // don't use "this"" => refers not to ctlr function !!!
+          //this.found = response.data;
+          c.found = response;
+        })
+      }
   }
 
   this.removeItem = function (itemIndex) {
