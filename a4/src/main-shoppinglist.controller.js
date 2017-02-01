@@ -9,6 +9,7 @@ MainController.$inject = ['MenuDataService', 'items'];
 function MainController(MenuDataService, items) {
   var mainlist = this;
   mainlist.items = items;
+  console.log(items)
 }
 
 })();
