@@ -26,6 +26,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
     controller: 'MainController as ctrl',
     resolve: {
       items: ['MenuDataService', function (MenuDataService) {
+        console.log("MenuDataService.getAllCategories");
         return MenuDataService.getAllCategories();
       }]
     }
