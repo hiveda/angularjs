@@ -22,7 +22,8 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   // Premade list page
   .state('categories', {
     url: '/categories',
-    templateUrl: 'template/categories.template.html',
+    //templateUrl: 'template/categories.template.html',
+    template: '<categories items="ctrl.items"></categories>',
     controller: 'CategoriesController as ctrl',
     resolve: {
       items: ['MenuDataService', function (MenuDataService) {
